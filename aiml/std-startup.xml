@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1" encoding="UTF-8">
+
+    <category>
+        <pattern>LOAD MAIN</pattern>
+        <template>
+            <!-- loading AIML files-->
+            <learn>main_chat.aiml</learn>
+            <learn>weather_forecast.aiml</learn>
+            <learn>weather_temperature.aiml</learn>
+        </template>
+    </category>
+
+</aiml>

@@ -1,0 +1,30 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+
+    <category>
+        <pattern>WETTERVORHERSAGE FÜR *</pattern>  <!-- must be upper case -->
+        <template>
+            <think><set name = "topic">FORECAST</set></think>  <!-- topic needs to be in capital letters for python-aiml -->
+            Die nächsten Tage wird es in <star/> sonnig bei _temp_ <get name="temp_unit"/>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WIE WIRD DAS WETTER IN *</pattern>  <!-- must be upper case -->
+        <template>
+            <srai>WETTERVORHERSAGE FÜR <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WIE WARM IST ES IN *</pattern>   <!-- must be upper case -->
+        <template>
+            <think><set name = "topic">TEMPERATURE</set></think>  <!-- topic needs to be in capital letters for python-aiml -->
+            <random>
+                <li>Aktuell hat es in <star/> _temp_ <get name="temp_unit"/></li>
+                <li>Es hat _temp_ <get name="temp_unit"/> in <star/></li>
+            </random>
+        </template>
+    </category>  
+
+</aiml>

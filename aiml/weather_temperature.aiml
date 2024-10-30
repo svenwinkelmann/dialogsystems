@@ -1,0 +1,19 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+    <topic name="TEMPERATURE">  <!-- topic needs to be in capital letters for python-aiml -->
+        <category>
+            <pattern>UND IN *</pattern>
+            <template>
+                Aktuell hat es in <star/> _temp_ <get name="temp_unit"/>
+            </template> 
+        </category>
+
+        <category>
+            <pattern>ZURÜCK</pattern>
+            <template>
+                <set name="topic"/>
+            </template>
+        </category>
+    </topic>
+
+</aiml>
