@@ -1,11 +1,10 @@
 <aiml version="1.0.1" encoding="UTF-8">
 
-
     <category>
         <pattern>WETTERVORHERSAGE FÜR *</pattern>  <!-- must be upper case -->
         <template>
             <think><set name = "topic">FORECAST</set></think>  <!-- topic needs to be in capital letters for python-aiml -->
-            Die nächsten Tage wird es in <star/> sonnig bei _temp_ <get name="temp_unit"/>
+            Die nächsten Tage wird es in <star/> _condition_ bei _temp_ <get name="temp_unit"/>
         </template>
     </category>
 

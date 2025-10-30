@@ -4,7 +4,7 @@
         <category>
             <pattern>UND IN *</pattern>
             <template>
-                Die nächsten Tage wird es in <star/> wolkig bei _temp_ <get name="temp_unit"/>
+                Die nächsten Tage wird es in <star/> _condition_ bei _temp_ <get name="temp_unit"/>
             </template>
         </category>
 
