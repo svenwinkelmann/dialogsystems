@@ -2,6 +2,7 @@
 *model*
 .venv*
 data/*
+chroma_db
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
