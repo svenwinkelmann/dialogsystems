@@ -1,5 +1,11 @@
 version: "3.1"
 stories:
+- story: hello path
+  steps:
+  - intent: hello
+  - action: utter_hello
+  - action: action_restart
+
 - story: happy path order pizza
   steps:
   - intent: order_pizza
@@ -10,8 +16,10 @@ stories:
   - action: utter_order_pizza_explicit_confirmation
   - intent: yes
   - action: utter_order_pizza_confirmation
+  - action: action_restart
 
 - story: happy path opening hours
   steps:
   - intent: opening_hours
   - action: utter_opening_hours_confirmation
+  - action: action_restart

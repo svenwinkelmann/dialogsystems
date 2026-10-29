@@ -1,5 +1,11 @@
 version: "3.1"
 nlu:
+- intent: hello
+  examples: |
+    - Hallo
+    - Hi
+    - Huhu
+
 - intent: order_pizza
   examples: |
     - Ich möchte eine [vegetarische](topping) Pizza bestellen
