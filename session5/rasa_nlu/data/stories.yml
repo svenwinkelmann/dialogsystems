@@ -1,0 +1,9 @@
+version: "3.1"
+stories:
+- story: hello path
+  steps:
+  - intent: hello
+  - action: utter_hello
+  - action: action_restart
+
+# TODO: Hier Story für Pizza bestellen und Öffnungszeiten hinzufügen
