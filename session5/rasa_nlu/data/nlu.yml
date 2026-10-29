@@ -1,0 +1,25 @@
+version: "3.1"
+nlu:
+- intent: hello
+  examples: |
+    - Hallo
+    - Hi
+    - Huhu
+
+- intent: order_pizza
+  examples: |
+    - Pizza bestellen
+
+# TODO: Hier intents und examples hinzufügen
+
+- regex: topping
+  examples: |
+    - \b(Thunfisch|Vegetarisch|Salami|Schinken)\b
+
+# TODO: Hier regex für Wochentag hinzufügen
+
+- synonym: Pizza
+  examples: |
+    - Pizza
+    - Pizzen
+    - Mafiatorte

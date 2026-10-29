@@ -1,0 +1,43 @@
+version: "3.1"
+
+# TODO: Intents und Entities hinzufügen
+intents:
+  - hello
+  - order_pizza
+
+entities:
+  - topping
+
+slots:
+  session_started:
+    type: any
+    influence_conversation: false
+    initial_value: false
+    mappings:
+      - type: controlled
+
+  weekday:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: weekday
+  topping:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: topping
+
+responses:
+
+# TODO: Systemäußerungen hier einfügen
+
+  utter_default:
+  - text: "Ich verstehe nicht, bitte umformulieren."
+
+  utter_hello:
+  - text: "Hallo, wie geht's?"
+
+session_config:
+  session_expiration_time: 60  # value in minutes
+  carry_over_slots_to_new_session: true
