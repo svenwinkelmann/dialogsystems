@@ -1,0 +1,1 @@
+This example is based on https://github.com/RasaHQ/rasa/tree/3.6.x/examples

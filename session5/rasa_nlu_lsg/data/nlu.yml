@@ -1,0 +1,57 @@
+version: "3.1"
+nlu:
+- intent: order_pizza
+  examples: |
+    - Ich möchte eine [vegetarische](topping) Pizza bestellen
+    - Bestellung einer [Salami](topping) Pizza
+    - Eine Pizza [Salami](topping) bitte
+    - Liefere mir eine [Salami](topping) Pizza
+    - Eine [vegetarische](topping) Pizza sofort
+    - Kann ich eine Pizza [Thunfisch](topping) bestellen
+    - Ich möchte eine Bestellung aufgeben
+
+- intent: opening_hours
+  examples: |
+    - Wann hat das Restaurant geöffnet?
+    - Ist geöffnet?
+    - Ist die Pizzeria offen?
+    - Kann ich bei euch einen Pizza essen gehen?
+    - Wann habt ihr am [Montag](weekday) geöffnet?
+    - Ist am [Freitag](weekday) geöffnet?
+    - Öffnungszeiten für [Samstag](weekday)
+    - Habt ihr [Sonntag](weekday) auf?
+    - Liefert ihr am [Di](weekday)?
+
+- intent: yes
+  examples: |
+    - ja
+    - yes
+    - stimmt
+    - das stimmt
+    - korrekt 
+    - passt so
+    - passd scho'
+
+- intent: no
+  examples: |
+    - nein
+    - no
+    - das ist falsch
+    - stimmt nicht
+    - nope
+    - falsch
+
+#- regex: weekday
+#  examples: |
+#    - \b(Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag)\b
+#    - \b(Mo|Di|Mi|Do|Fr|Sa|So)\b\.
+
+- regex: topping
+  examples: |
+    - \b(Thunfisch|Vegetarisch|Salami|Schinken)\b
+
+- synonym: Pizza
+  examples: |
+    - Pizza
+    - Pizzen
+    - Mafiatorte

@@ -1,0 +1,17 @@
+version: "3.1"
+stories:
+- story: happy path order pizza
+  steps:
+  - intent: order_pizza
+    entities:
+      - topping
+  - action: utter_ask_cheese
+  - intent: yes
+  - action: utter_order_pizza_explicit_confirmation
+  - intent: yes
+  - action: utter_order_pizza_confirmation
+
+- story: happy path opening hours
+  steps:
+  - intent: opening_hours
+  - action: utter_opening_hours_confirmation

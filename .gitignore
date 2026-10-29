@@ -5,6 +5,7 @@ data/*
 chroma_db
 klausur/*
 .vscode/*
+*.rasa*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

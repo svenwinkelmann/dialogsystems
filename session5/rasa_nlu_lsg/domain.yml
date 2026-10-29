@@ -1,0 +1,63 @@
+version: "3.1"
+
+intents:
+  - order_pizza
+  - opening_hours
+  - yes
+  - no
+
+entities:
+  - topping
+  - weekday
+
+slots:
+  session_started:
+    type: any
+    influence_conversation: false
+    initial_value: false
+    mappings:
+      - type: controlled
+
+  weekday:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: weekday
+        
+  topping:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: topping
+
+responses:
+  utter_greet:
+  - text: "Willkommen! Ich bin der Pizzabot 🍕 – möchtest du eine Pizza bestellen?"
+#    buttons:
+#    - title: "Pizza bestellen"
+#      payload: "/order_pizza"
+#    - title: "Öffnungszeiten erfragen"
+#      payload: "/opening_hours"
+
+  utter_ask_cheese:
+  - text: "Möchtest du extra Käse?"
+
+  utter_order_pizza_explicit_confirmation:
+  - text: "Du möchtest eine Salami Pizza mit extra Käse?"
+
+  utter_order_pizza_confirmation:
+  - text: "Alles klar, deine Pizza ist unterwegs."
+
+  utter_opening_hours_confirmation:
+  - text: "Wir haben am Freitag von 14-23 Uhr geöffnet"
+
+  utter_goodbye:
+  - text: "Vielen Dank und tschüss!"
+
+  utter_default:
+  - text: "Ich verstehe nicht, bitte umformulieren."
+
+session_config:
+  session_expiration_time: 60  # value in minutes
+  carry_over_slots_to_new_session: true

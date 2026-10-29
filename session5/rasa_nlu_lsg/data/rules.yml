@@ -1,0 +1,8 @@
+version: "3.1"
+rules:
+
+- rule: Begrüßung beim Session-Start
+  steps:
+    - slot_was_set:
+        - session_started: true
+    - action: utter_greet
