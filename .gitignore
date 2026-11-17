@@ -6,6 +6,7 @@ chroma_db
 klausur/*
 .vscode/*
 *.rasa*
+session8/rasa_calm/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
